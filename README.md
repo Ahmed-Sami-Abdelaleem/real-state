@@ -241,8 +241,91 @@ In Scope
 
       - Legal and Tax Compliance
       - Legal review of host agreements, tax regulations, and compliance is the responsibility of users.
+  ### 2. Stakeholders
+  ## a-List of key stakeholders
+  - 1- project owner: this project for Ahmed Sami I developed it for traning reasonse .
+  ## b- team members and tech stack
+  - 1- for front end Ahmed Sami with tech stack Next.js 14 and tailsindcss for stayling and redux as state management .
+  - 2- for front end Ahmed Sami with tech stack Nest.js  and PostgreSQL and Prisma ORM and Restfull api as architecture desgin .  
+  
 
    - Offline Access
         The platform will not support offline usage; it requires an active internet connection.
 
 By defining these boundaries, the project will focus on delivering a robust property rental and purchase platform that meets the needs of hosts and guests while leaving room for future enhancements.
+##  c-Roles
+
+The success of the project depends on the contributions and collaboration of various stakeholders, each playing a specific role. Below is a breakdown of the primary stakeholders and their responsibilities:
+- 1. Platform Users
+     - Hosts
+
+        - Role: Property Owners/Managers
+        - Responsibilities:
+        List and manage properties, including availability, pricing, and details.
+        Define house rules, amenities, and cancellation policies for their properties.
+        Monitor and respond to guest reviews and ratings.
+        Communicate with guests regarding bookings, inquiries, or issues.
+        Manage their profiles, including bank account details for payouts.
+        Maintain high standards to achieve and retain a super host rating.
+
+    - Guests
+
+      - Role: Property Renters or Buyers
+      - Responsibilities:
+      Search, filter, and book properties based on their needs.
+      Create and manage wishlists to save properties for future reference.
+        Leave detailed reviews and ratings for properties and hosts.
+        Manage their profiles, including credit card details for payments.
+        Communicate with hosts regarding property-related queries.
+- 2. Platform Administrator
+
+    - Role: System Administrator/Moderator
+    - Responsibilities:
+        Ensure smooth operation and maintenance of the platform.
+        Monitor platform activity to prevent abuse or violations of terms and policies.
+        Handle disputes between hosts and guests if needed.
+        Manage platform-wide settings, such as taxes, service fees, and promo codes.
+        Oversee user account verifications and handle support requests.
+
+- 3. Development Team
+
+    - Role: Software Engineers, Designers, and Testers
+    - Responsibilities:
+        Design and develop the platform, ensuring a user-friendly experience.
+        Build and integrate features like property listings, booking systems, payment gateways, and review modules.
+        Conduct rigorous testing to ensure functionality, security, and scalability.
+        Provide regular updates and fixes based on user feedback and system needs.
+
+- 4. Product Owner/Project Manager
+
+    - Role: Visionary and Coordinator
+    - Responsibilities:
+        Define the vision, goals, and priorities of the platform.
+        Manage project timelines, budgets, and deliverables.
+        Act as the main point of contact between stakeholders.
+        Ensure that the platform aligns with user needs and market demands.
+
+- 5. Financial Partners
+
+    - Role: Payment Gateways and Banks
+    - Responsibilities:
+        Provide secure payment processing for guests and payout management for hosts.
+        Ensure compliance with financial regulations and fraud prevention.
+
+- 6. Marketing and Support Team
+
+    - Role: Outreach and User Assistance
+    - Responsibilities:
+        Promote the platform to attract hosts and guests.
+        Create tutorials, FAQs, and documentation for user onboarding.
+        Handle customer queries and provide technical or general support.
+
+- 7. Legal and Compliance Team
+
+    - Role: Risk and Regulation Management
+    - Responsibilities:
+        Draft and enforce terms of service and privacy policies.
+        Ensure compliance with local, national, and international laws.
+        Address legal concerns related to property listings, cancellations, and payments.
+
+These roles collectively ensure the platform is user-friendly, secure, and successful in meeting its objectives.
