@@ -241,9 +241,9 @@ In Scope
 
       - Legal and Tax Compliance
       - Legal review of host agreements, tax regulations, and compliance is the responsibility of users.
-  ### 2. Stakeholders
-  ## a-List of key stakeholders
-  - 1- project owner: this project for Ahmed Sami I developed it for traning reasonse .
+  ## e. Stakeholders
+  -List of key stakeholders
+     - 1- project owner: this project for Ahmed Sami I developed it for traning reasonse.
   ## b- team members and tech stack
   - 1- for front end Ahmed Sami with tech stack Next.js 14 and tailsindcss for stayling and redux as state management .
   - 2- for front end Ahmed Sami with tech stack Nest.js  and PostgreSQL and Prisma ORM and Restfull api as architecture desgin .  
@@ -329,3 +329,100 @@ The success of the project depends on the contributions and collaboration of var
         Address legal concerns related to property listings, cancellations, and payments.
 
 These roles collectively ensure the platform is user-friendly, secure, and successful in meeting its objectives.
+### 2. System
+- Functional Requirements
+The functional requirements define the specific actions, processes, and interactions that the platform must support to fulfill its objectives.
+  - 1. User Management
+
+    Users (hosts and guests) can register, log in, and manage their accounts.
+    Profile management includes editing personal details, adding profile pictures, and setting up emergency contact information.
+    User roles are defined as either "Host" or "Guest," with specific permissions and functionalities.
+
+  - 2. Property Listings
+
+    Hosts can create, update, and delete property listings with the following details:
+        Name, address, bedroom and bathroom count, price, and availability status.
+        Check-in/check-out times and availability dates.
+        Categories (e.g., cozy, apartment, entire house).
+        Detailed descriptions of amenities, house rules, and cancellation policies.
+        Upload multiple property photos.
+
+    Each property must display:
+        An average rating and total number of ratings.
+        A list of reviews with photos (if provided) and multi-criteria ratings.
+
+ - 3. Booking System
+
+    Guests can book properties by selecting:
+        Check-in and check-out dates, number of guests, and payment method.
+        Apply promo codes for discounts.
+
+    Booking records include:
+        Unique booking ID, booking date, and modification date.
+        Tax, cleaning fee, total cost, and payment breakdown (paid vs. due amounts).
+        Cancellation information: refund amount, percentage, and refund date.
+
+    Notifications for booking confirmations, modifications, or cancellations.
+
+ - 4. Payment and Financial Transactions
+
+    Secure integration of payment gateways for guests to pay with credit cards.
+        Card details include card number, type, CSV, expiration date, and billing address.
+        Only one guest can own a specific credit card.
+
+    Host payouts are processed to linked bank accounts, with details such as:
+        Account number, routing number, and account type.
+        Each account belongs to only one host.
+
+ - 5. Wishlist Management
+
+    Guests can create, update, and delete wishlists with:
+        A unique name and privacy settings.
+        Properties added to wishlists, optionally with desired check-in and check-out dates.
+
+ - 6. Review and Rating System
+
+    Guests can review properties with:
+        Ratings for cleanliness, communication, check-in, accuracy, location, value, and overall experience.
+        Optional comments and photos.
+        Review creation and modification dates.
+
+    Hosts can review guests with a rating and comment.
+
+    Guests can review hosts with a rating and comment.
+
+- 7. Messaging System
+
+    Hosts and guests can exchange messages, including:
+        Sender, receiver, message body, and creation timestamp.
+        Ability to view and manage message history.
+
+  - 8. Search and Filtering
+
+    Guests can search for properties using criteria such as:
+        Location, availability, price range, and categories.
+        Specific amenities or house rules.
+
+  - 9. Super Host Designation
+
+    Hosts can achieve "Super Host" status based on ratings and reviews.
+
+  - 10. Reporting and Analytics
+
+    Platform administrators can access reports on:
+        Total properties, bookings, and revenue.
+        User activity, ratings, and reviews.
+
+  - 11. Notifications
+
+    Real-time notifications for:
+        Booking confirmations, cancellations, or modifications.
+        Property availability updates or guest inquiries.
+
+  - 12. Data Integrity and Security
+
+    Unique IDs for users, properties, bookings, credit cards, and bank accounts.
+    Secure storage and encryption for sensitive information (e.g., passwords, credit card details).
+    Role-based access control to ensure appropriate permissions.
+
+These functional requirements define the platform's core capabilities, ensuring it meets user expectations and operational goals.
