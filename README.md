@@ -500,6 +500,7 @@ These NFRs ensure that the platform meets high standards of performance, securit
 These functional requirements define the platform's core capabilities, ensuring it meets user expectations and operational goals.
 ### 3. Desgin
  a- system architecture desgin 
+![system arc desgin taklok drawio](https://github.com/user-attachments/assets/f0394149-a0c0-467d-add1-c551fa02c32b)
 
 
  b- UML digrams 
