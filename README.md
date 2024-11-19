@@ -422,6 +422,78 @@ The functional requirements define the specific actions, processes, and interact
   - 12. Data Integrity and Security
 
     Unique IDs for users, properties, bookings, credit cards, and bank accounts.
+    Non-Functional Requirements
+
+- The non-functional requirements (NFRs) define the system's quality attributes, ensuring it operates effectively, efficiently, and reliably while providing a good user experience.
+  - 1. Performance
+
+    The platform should handle up to 100,000 simultaneous users without significant degradation in performance.
+    Page load times should not exceed 2 seconds for 90% of users under normal traffic conditions.
+    The system must process bookings and payments within 3 seconds.
+
+  - 2. Scalability
+
+    The platform must scale horizontally to accommodate increased traffic, property listings, and users without downtime.
+    The system should support the addition of new features, such as integrating more payment gateways or analytics tools.
+
+  - 3. Availability
+
+    The platform should achieve 99.9% uptime, with minimal disruptions to services.
+    Maintenance windows should be scheduled during off-peak hours and announced in advance to users.
+
+  - 4. Security
+
+    Use encryption protocols (e.g., TLS 1.2/1.3) for secure data transmission.
+    Store sensitive information like passwords and payment details securely using industry-standard hashing and encryption.
+    Ensure compliance with regulations like GDPR, CCPA, or PCI-DSS for handling user data.
+    Implement robust authentication mechanisms, including support for multi-factor authentication (MFA).
+
+  - 5. Usability
+
+    The platform must provide an intuitive user interface with clear navigation for both desktop and mobile users.
+    Ensure the platform supports responsive design to accommodate different screen sizes and devices.
+    Provide accessibility features to comply with WCAG 2.1 AA standards, ensuring inclusivity for users with disabilities.
+
+  - 6. Reliability
+
+    The platform must recover automatically from server failures within 5 minutes.
+    Data consistency must be maintained across distributed systems, ensuring no loss of critical booking or payment information.
+
+  - 7. Maintainability
+
+    The codebase should follow clean coding practices with clear documentation to facilitate updates and debugging.
+    Modular and reusable components should be used to reduce development time for future features.
+
+  - 8. Portability
+
+    The platform should be deployable across major cloud service providers (e.g., AWS, Azure, Google Cloud).
+    Ensure compatibility with modern web browsers (Chrome, Firefox, Safari, Edge) and mobile operating systems (iOS and Android).
+
+  - 9. Compliance
+
+    Adhere to legal and regulatory requirements for each country or region where the platform operates, including taxation laws and refund policies.
+
+  - 10. Monitoring and Logging
+
+    Implement real-time monitoring for server health, API performance, and user activity.
+    Maintain logs for key actions (e.g., bookings, payments, reviews) for at least one year to aid troubleshooting and audits.
+
+  - 11. Localization and Internationalization
+
+    Support multiple languages and currencies based on user preferences and regional settings.
+    Provide date, time, and address formats customized for different locales.
+
+  - 12. Backup and Disaster Recovery
+
+    Automatically back up user and transaction data daily, with the ability to restore within 30 minutes in case of a failure.
+    Implement disaster recovery mechanisms to handle data center outages or cyberattacks.
+
+  - 13. Responsiveness to Change
+
+    The system should allow updates to property attributes, pricing rules, and policies without requiring downtime.
+    Provide tools for administrators to manage changes efficiently.
+
+These NFRs ensure that the platform meets high standards of performance, security, and reliability while delivering a superior user experience.
     Secure storage and encryption for sensitive information (e.g., passwords, credit card details).
     Role-based access control to ensure appropriate permissions.
 
