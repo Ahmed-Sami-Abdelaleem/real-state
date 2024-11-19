@@ -1,6 +1,6 @@
 ### Real-state system his name is "taklok"
-## 1. Introduction
-## project requirements
+### 1. Introduction
+## a-project requirements
 
 - 1-Each stay or property has a name, address, bedroom count, bathroom count, price , availability, isSell.
   show the dates when the property is available, check-in time, check-out time, an
@@ -112,3 +112,25 @@
   - The rating given by the guest to the host
   - The date the review for the host was created by the guest
   - The date the review for the host was modified by the guest (if it was modified)
+## b-Problem Statement:
+- The current process of booking, managing, and reviewing rental properties lacks a unified, feature-rich platform that caters to the diverse needs of property hosts and guests. Existing solutions fail to address the following challenges comprehensively:
+
+  - Complex Property Listings: Managing detailed property attributes (e.g., availability, ratings, amenities, house rules, photos, and cancellation policies) is cumbersome and often incomplete, leading to poor user experiences for guests.
+
+     - Comprehensive User Profiles: Platforms often lack robust user profiles for both hosts and guests, which are essential for personalized experiences and trust-building.
+
+   - Booking Management: Current systems fail to provide a detailed and flexible booking experience that includes pricing, taxes, discounts, cancellations, and payment tracking for both renting and buying properties.
+
+   - Review and Feedback System: Many platforms lack a nuanced review system, resulting in incomplete feedback that does not address cleanliness, communication, accuracy, or value.
+
+   - Wishlist Functionality: Guests need the ability to organize and save properties with specific preferences (e.g., privacy settings, check-in/out dates) to streamline decision-making.
+
+   - Secure Payments and Payouts: Ensuring secure payment processes, including credit card details for guests and bank account payouts for hosts, is critical to user confidence.
+
+   - Host-Guest Communication: Communication channels are often fragmented, limiting effective interaction between hosts and guests for inquiries or issue resolution.
+
+   - Scalability and Relationships: Platforms need to support complex relationships, such as multiple reviews, messages, and wishlists, while maintaining ease of use and performance.
+
+   - Multi-Categorization and Filtering: Guests need enhanced filtering and categorization capabilities (e.g., cozy homes, apartments, amenities) to find properties that match their preferences effortlessly.
+
+This project aims to build a comprehensive platform that addresses these gaps by enabling detailed property management, seamless booking processes, secure financial transactions, and user-friendly features to enhance the overall experience for both hosts and guests.
