@@ -498,3 +498,8 @@ These NFRs ensure that the platform meets high standards of performance, securit
     Role-based access control to ensure appropriate permissions.
 
 These functional requirements define the platform's core capabilities, ensuring it meets user expectations and operational goals.
+### 3. Desgin
+ a- system architecture desgin 
+
+
+ b- UML digrams 
