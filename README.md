@@ -134,3 +134,50 @@
    - Multi-Categorization and Filtering: Guests need enhanced filtering and categorization capabilities (e.g., cozy homes, apartments, amenities) to find properties that match their preferences effortlessly.
 
 This project aims to build a comprehensive platform that addresses these gaps by enabling detailed property management, seamless booking processes, secure financial transactions, and user-friendly features to enhance the overall experience for both hosts and guests.
+## c-Objectives
+
+The project aims to build a feature-rich platform for managing rental and purchased property listings, bookings, and interactions between hosts and guests. The key objectives are:
+
+  - Detailed Property Management
+        Enable hosts to list properties with comprehensive details, including name, address, bedroom and bathroom count, price, availability, average ratings, photos, amenities, house rules, and cancellation policies.
+        Allow categorization of properties (e.g., cozy, apartment) and listing of bedroom details (e.g., bed count and type).
+
+  - User-Friendly Booking System
+        Provide a robust booking system with functionality to manage booking dates, check-in/check-out times, guest count, and payment details.
+        Include support for tax calculations, promo codes, cancellation tracking, refunds, and payments for both renting and buying scenarios.
+
+  - Secure Financial Transactions
+        Implement secure payment processing for guests, including credit card details (card number, CSV, expiration, cardholder name, and billing address).
+        Ensure seamless payouts to hosts via linked bank accounts with account and routing numbers.
+
+  - Advanced Wishlist Functionality
+        Allow guests to create, organize, and manage multiple wishlists with customizable privacy settings.
+        Enable wishlists to store detailed property preferences, including tentative check-in and check-out dates.
+
+  - Enhanced Review System
+        Enable both hosts and guests to review each other with detailed criteria (e.g., cleanliness, communication, accuracy, and overall rating).
+        Support property reviews with optional photos, comments, and multi-criteria ratings.
+
+  - Profile Customization and Trust-Building
+        Provide hosts and guests with rich profiles, including photos, detailed personal information, and emergency contact details.
+        Introduce ratings for hosts (e.g., super host designation) and guests to foster trust and transparency.
+
+  -  Effective Communication Tools
+        Facilitate seamless two-way messaging between hosts and guests with details such as sender/receiver, creation date, and message content.
+
+  -  Scalable and Flexible Relationships
+        Support complex relationships between components (e.g., properties, bookings, reviews, and wishlists).
+        Ensure scalability for managing multiple properties, users, and interactions efficiently.
+
+  -  Comprehensive Search and Filtering
+        Enable users to filter properties by categories, amenities, ratings, availability, and price to simplify the search process.
+
+  -  Data Integrity and Security
+
+  -  Ensure the uniqueness of user IDs, property IDs, booking IDs, and financial information to prevent duplication and fraud.
+
+  -  Streamlined User Experiences
+
+  -  Create an intuitive user interface for hosts to manage listings and guests to explore, book, and review properties effortlessly.
+
+By achieving these objectives, the platform will address the gaps in current property rental systems and provide a seamless, secure, and user-friendly experience for all stakeholders.
