@@ -113,11 +113,11 @@
   - The date the review for the host was created by the guest
   - The date the review for the host was modified by the guest (if it was modified)
 ## b-Problem Statement:
-- The current process of booking, managing, and reviewing rental properties lacks a unified, feature-rich platform that caters to the diverse needs of property hosts and guests. Existing solutions fail to address the following challenges comprehensively:
+ The current process of booking, managing, and reviewing rental properties lacks a unified, feature-rich platform that caters to the diverse needs of property hosts and guests. Existing solutions fail to address the following challenges comprehensively:
 
   - Complex Property Listings: Managing detailed property attributes (e.g., availability, ratings, amenities, house rules, photos, and cancellation policies) is cumbersome and often incomplete, leading to poor user experiences for guests.
 
-     - Comprehensive User Profiles: Platforms often lack robust user profiles for both hosts and guests, which are essential for personalized experiences and trust-building.
+  - Comprehensive User Profiles: Platforms often lack robust user profiles for both hosts and guests, which are essential for personalized experiences and trust-building.
 
    - Booking Management: Current systems fail to provide a detailed and flexible booking experience that includes pricing, taxes, discounts, cancellations, and payment tracking for both renting and buying properties.
 
