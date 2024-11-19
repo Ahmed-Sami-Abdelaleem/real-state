@@ -181,3 +181,68 @@ The project aims to build a feature-rich platform for managing rental and purcha
   -  Create an intuitive user interface for hosts to manage listings and guests to explore, book, and review properties effortlessly.
 
 By achieving these objectives, the platform will address the gaps in current property rental systems and provide a seamless, secure, and user-friendly experience for all stakeholders.
+## d-Scope
+
+The scope of this project outlines the functionalities and boundaries of the platform for both hosts and guests. It defines the key features, supported user interactions, and exclusions to ensure clarity and focus throughout development.
+In Scope
+
+  - Property Management
+        Allow hosts to create, update, and manage property listings with detailed attributes, including:
+            Property name, address, bedroom and bathroom count.
+            Availability dates, check-in/check-out times, and price.
+            House rules, amenities, cancellation policies, and multiple photos.
+            Categorization (e.g., cozy, apartment, entire house).
+
+  -  Booking System
+        Enable guests to book or purchase properties with the following features:
+            Booking details: check-in/out dates, guest count, booking date, and modification tracking.
+            Payment breakdown: taxes, cleaning fees, discounts, refund policies, and promo codes.
+            Cancellation management with refund tracking.
+
+  - User Profiles
+        Hosts: Create profiles with details such as name, address, bank account information, ratings, and super host designation.
+        Guests: Set up profiles with personal details, ratings, wishlists, and emergency contact information.
+
+  -  Secure Transactions
+        Integrate secure payment systems for:
+            Guests: Adding and managing credit cards for payments.
+            Hosts: Receiving payouts via linked bank accounts.
+
+  - Wishlist Functionality
+        Allow guests to create, manage, and organize multiple wishlists with privacy settings.
+        Enable wishlists to store specific property details, including tentative check-in/out dates.
+
+  -  Review and Rating System
+        Enable detailed reviews for properties, hosts, and guests, including multi-criteria ratings (e.g., cleanliness, communication, value).
+        Support comments and optional photos in reviews.
+
+  - Communication Tools
+        Provide a messaging system between hosts and guests with sender/receiver details, timestamps, and message content.
+
+  -  Search and Filtering
+        Allow guests to search and filter properties by categories, availability, price, and amenities.
+
+  -  Data Integrity
+        Ensure the uniqueness of IDs for users, properties, bookings, and financial records.
+
+  -  Scalability and Extensibility
+        Build a platform architecture that supports the addition of new features or categories without significant restructuring.
+
+  - Out of Scope
+
+      - Third-Party Property Listings
+        Integration with third-party property platforms is not included in this phase.
+
+      - Real-Time Availability Updates
+        Automatic syncing of availability with external calendars (e.g., Google Calendar) is not part of the current scope.
+
+      - Multi-Currency Support
+        Payments will support only one currency for this phase.
+
+      - Legal and Tax Compliance
+      - Legal review of host agreements, tax regulations, and compliance is the responsibility of users.
+
+   - Offline Access
+        The platform will not support offline usage; it requires an active internet connection.
+
+By defining these boundaries, the project will focus on delivering a robust property rental and purchase platform that meets the needs of hosts and guests while leaving room for future enhancements.
