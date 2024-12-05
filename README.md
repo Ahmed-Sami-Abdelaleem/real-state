@@ -329,7 +329,7 @@ The success of the project depends on the contributions and collaboration of var
         Address legal concerns related to property listings, cancellations, and payments.
 
 These roles collectively ensure the platform is user-friendly, secure, and successful in meeting its objectives.
-### 2. System
+### 2. System analysis
 - Functional Requirements
 The functional requirements define the specific actions, processes, and interactions that the platform must support to fulfill its objectives.
    - 1. User Management
@@ -498,9 +498,15 @@ These NFRs ensure that the platform meets high standards of performance, securit
     Role-based access control to ensure appropriate permissions.
 
 These functional requirements define the platform's core capabilities, ensuring it meets user expectations and operational goals.
-### 3. Desgin
+### 3. System Desgin
  a- system architecture desgin 
 ![system arc desgin taklok drawio](https://github.com/user-attachments/assets/f0394149-a0c0-467d-add1-c551fa02c32b)
 
 
  b- UML digrams 
+ c- ERD desgin
+ ![realState database ERD drawio](https://github.com/user-attachments/assets/b04c1f85-04b2-4e6b-b77c-54772ab730c0)
+
+ d- Schema desgin
+![schemaRealState drawio](https://github.com/user-attachments/assets/6e9dcd87-3c72-4d00-9352-8393f4dce458)
+
