@@ -187,6 +187,7 @@ export const Header = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md flex items-center space-x-2 text-sm font-medium hover:bg-gray-50 transition-colors"
+                  onClick={() => router.push("/login")}
                 >
                   <LogIn className="h-4 w-4" />
                   <span>Login</span>
