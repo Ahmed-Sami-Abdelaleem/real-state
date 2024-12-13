@@ -1,5 +1,6 @@
 import PropertyCard from "@/components/card";
 import FilterButton from "@/components/FilterButton";
+import MapLibreMap from "@/components/Map";
 import SearchBar from "@/components/searchFilter";
 
 function Page() {
@@ -64,7 +65,7 @@ function Page() {
         </div>
 
         {/* Right Column: Map (Hidden on small screens) */}
-        <div className="hidden lg:block ">map</div>
+        <MapLibreMap />
       </div>
     </div>
   );
