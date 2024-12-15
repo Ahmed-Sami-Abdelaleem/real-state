@@ -1,3 +1,23 @@
+import { login } from "@/store/slices/authSlice";
+import { AppDispatch } from "@/store/store";
+
+async function ServerActions(formData: FormData, dispatch: AppDispatch) {
+  "use server";
+  const email = formData.get("email");
+  const password = formData.get("password");
+
+  if (typeof email !== "string" || email.length === 0) {
+    throw new Error("Invalid email");
+  }
+  if (typeof password !== "string" || password.length === 0) {
+    throw new Error("Invalid password");
+  }
+  try {
+    await dispatch(login({ email, password }));
+  } catch (error) {
+    console.error("Login failed:", error);
+  }
+}
 function page() {
   return (
     <section className="bg-white">
@@ -36,7 +56,10 @@ function page() {
               nam dolorum aliquam, quibusdam aperiam voluptatum.
             </p>
 
-            <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+            <form
+              onSubmit={() => ServerActions}
+              className="mt-8 grid grid-cols-6 gap-6"
+            >
               <div className="col-span-6">
                 <label
                   htmlFor="Email"
