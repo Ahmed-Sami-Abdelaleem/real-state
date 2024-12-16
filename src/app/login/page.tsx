@@ -1,24 +1,34 @@
+"use client";
 import { login } from "@/store/slices/authSlice";
-import { AppDispatch } from "@/store/store";
-
-async function ServerActions(formData: FormData, dispatch: AppDispatch) {
-  "use server";
-  const email = formData.get("email");
-  const password = formData.get("password");
-
-  if (typeof email !== "string" || email.length === 0) {
-    throw new Error("Invalid email");
-  }
-  if (typeof password !== "string" || password.length === 0) {
-    throw new Error("Invalid password");
-  }
-  try {
-    await dispatch(login({ email, password }));
-  } catch (error) {
-    console.error("Login failed:", error);
-  }
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+interface LoginError {
+  message: string;
 }
-function page() {
+function Login() {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const router = useRouter();
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Example: Replace with API request
+    if (email && password) {
+      dispatch(login({ email, password }))
+        .unwrap()
+        .then((res: any) => {
+          // Redirect on successful login
+          router.push("/");
+        })
+        .catch((error: LoginError) => {
+          // Handle login error (show alert or toast)
+          alert(error || "Login failed");
+        });
+    }
+  };
   return (
     <section className="bg-white">
       <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
@@ -48,7 +58,7 @@ function page() {
             </a>
 
             <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-              Welcome to Squid 🦑
+              Welcome to TakLok
             </h1>
 
             <p className="mt-4 leading-relaxed text-gray-500">
@@ -57,7 +67,7 @@ function page() {
             </p>
 
             <form
-              onSubmit={() => ServerActions}
+              onSubmit={() => handleSubmit}
               className="mt-8 grid grid-cols-6 gap-6"
             >
               <div className="col-span-6">
@@ -70,9 +80,13 @@ function page() {
                 </label>
 
                 <input
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                   type="email"
                   id="Email"
                   name="email"
+                  required
+                  placeholder="Email address"
                   className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                 />
               </div>
@@ -87,9 +101,13 @@ function page() {
                 </label>
 
                 <input
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
                   type="password"
                   id="Password"
                   name="password"
+                  required
+                  placeholder="Password"
                   className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                 />
               </div>
@@ -126,13 +144,16 @@ function page() {
               </div>
 
               <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
-                  Create an account
+                <button
+                  type="submit"
+                  className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                >
+                  login
                 </button>
 
                 <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                   Already have an account?
-                  <a href="#" className="text-gray-700 underline">
+                  <a href="/login" className="text-gray-700 underline">
                     Log in
                   </a>
                   .
@@ -146,4 +167,4 @@ function page() {
   );
 }
 
-export default page;
+export default Login;

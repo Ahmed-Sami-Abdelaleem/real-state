@@ -1,73 +1,104 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
-interface User {
-  id: string;
-  email: string;
-  name: string;
-  // Add other user properties as needed
-}
+// Define API endpoints
+const API_BASE_URL = "http://localhost:4000/user/auth";
 
-interface AuthState {
-  user: User | null;
+// Define the initial state
+export interface AuthState {
+  user: Record<string, any> | null;
+  isAuthenticated: boolean;
   loading: boolean;
   error: string | null;
 }
 
-// Initial state
 const initialState: AuthState = {
   user: null,
+  isAuthenticated: false,
   loading: false,
   error: null,
 };
 
+// Async thunks for login and register
 export const login = createAsyncThunk(
   "auth/login",
-  async (credentials: { email: string; password: string }, thunkAPI) => {
+  async (
+    credentials: { email: string; password: string },
+    { rejectWithValue }
+  ) => {
     try {
-      const response = await fetch("http://localhost:3000/user", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(credentials),
-      });
-
-      if (!response.ok) {
-        throw new Error("Login failed");
-      }
-
-      const data = await response.json();
-      return data; // Assuming the backend returns user data
-    } catch (error: unknown) {
-      if (error instanceof Error) {
-        return thunkAPI.rejectWithValue(error.message);
-      }
-      return thunkAPI.rejectWithValue("An unknown error occurred");
+      const response = await axios.post(`${API_BASE_URL}/login`, credentials);
+      return response.data; // Assuming the response contains user data
+    } catch (error: any) {
+      return rejectWithValue(error.response?.data?.message || "Login failed");
     }
   }
 );
+
+export const register = createAsyncThunk(
+  "auth/register",
+  async (
+    userData: { email: string; password: string; name: string },
+    { rejectWithValue }
+  ) => {
+    try {
+      const response = await axios.post(`${API_BASE_URL}/register`, userData);
+      console.log(response.data);
+      return response.data; // Assuming the response contains user data
+    } catch (error: any) {
+      return rejectWithValue(
+        error.response?.data?.message || "Registration failed"
+      );
+    }
+  }
+);
+
+// Create the auth slice
 const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    logout: (state) => {
+    logout(state) {
       state.user = null;
+      state.isAuthenticated = false;
       state.error = null;
     },
   },
   extraReducers: (builder) => {
+    // Login reducers
     builder
       .addCase(login.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(login.fulfilled, (state, action: PayloadAction<User>) => {
+      .addCase(login.fulfilled, (state, action) => {
         state.loading = false;
         state.user = action.payload;
+        state.isAuthenticated = true;
       })
-      .addCase(login.rejected, (state, action: PayloadAction<any>) => {
+      .addCase(login.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload;
+        state.error = action.payload as string;
+      });
+
+    // Register reducers
+    builder
+      .addCase(register.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(register.fulfilled, (state, action) => {
+        state.loading = false;
+        state.user = action.payload;
+        state.isAuthenticated = true;
+      })
+      .addCase(register.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload as string;
       });
   },
 });
+
+// Export actions and reducer
 export const { logout } = authSlice.actions;
 export default authSlice.reducer;

@@ -1,4 +1,44 @@
-function page() {
+"use client";
+
+import { register } from "@/store/slices/authSlice";
+import { RootState } from "@/store/store";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+function Registration() {
+  const dispatch = useDispatch();
+  const { loading, error } = useSelector((state: RootState) => state.auth);
+  const route = useRouter();
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState<string>("");
+  const [firstName, setFirstName] = useState<string>("");
+  const [lastName, setLastName] = useState<string>("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (password !== passwordConfirmation) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    if (!email || !password || !firstName || !lastName) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    const userData = {
+      email,
+      password,
+      name: `${firstName} ${lastName}`,
+    };
+
+    // Dispatch the register thunk
+    dispatch(register(userData));
+    route.push("/");
+  };
+
   return (
     <section className="bg-white">
       <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
@@ -36,7 +76,10 @@ function page() {
               nam dolorum aliquam, quibusdam aperiam voluptatum.
             </p>
 
-            <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+            <form
+              onSubmit={() => handleSubmit}
+              className="mt-8 grid grid-cols-6 gap-6"
+            >
               <div className="col-span-6 sm:col-span-3">
                 <label
                   htmlFor="FirstName"
@@ -46,9 +89,11 @@ function page() {
                 </label>
 
                 <input
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                   type="text"
                   id="FirstName"
-                  name="first_name"
+                  name="firstName"
                   className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                 />
               </div>
@@ -62,9 +107,11 @@ function page() {
                 </label>
 
                 <input
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
                   type="text"
                   id="LastName"
-                  name="last_name"
+                  name="lastName"
                   className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                 />
               </div>
@@ -79,6 +126,8 @@ function page() {
                 </label>
 
                 <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   id="Email"
                   name="email"
@@ -96,6 +145,8 @@ function page() {
                 </label>
 
                 <input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   type="password"
                   id="Password"
                   name="password"
@@ -112,6 +163,8 @@ function page() {
                 </label>
 
                 <input
+                  onChange={(e) => setPasswordConfirmation(e.target.value)}
+                  value={passwordConfirmation}
                   type="password"
                   id="PasswordConfirmation"
                   name="password_confirmation"
@@ -151,7 +204,10 @@ function page() {
               </div>
 
               <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
+                <button
+                  type="submit"
+                  className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                >
                   Create an account
                 </button>
 
@@ -171,4 +227,4 @@ function page() {
   );
 }
 
-export default page;
+export default Registration;

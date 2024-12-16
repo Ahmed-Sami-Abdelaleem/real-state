@@ -1,5 +1,6 @@
 "use client";
 
+import { RootState } from "@/store/store";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Heart,
@@ -15,15 +16,16 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-
+import { useSelector } from "react-redux";
 export const Header = () => {
+  const { isAuthenticated } = useSelector((state: RootState) => state.auth);
   const router = useRouter();
   const [activeTab, setActiveTab] = useState("forSell");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Mock authenticated state - replace with your auth logic
-  const isAuthenticated = false;
+
   const user = {
     name: "John Doe",
     image: "/api/placeholder/32/32",
